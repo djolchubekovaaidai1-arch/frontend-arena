@@ -15,7 +15,7 @@ export default function JavaScriptPage() {
         Test your JavaScript knowledge.
       </p>
 
-      <Quiz questions={jsQuestions} category="javascript" />
+      <Quiz questions={javascriptQuestions} category="javascript" />
     </div>
     </PageWrapper>
   )

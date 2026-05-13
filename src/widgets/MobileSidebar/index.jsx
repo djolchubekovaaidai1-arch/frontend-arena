@@ -8,6 +8,7 @@ import {
   FaReact,
   FaUser,
   FaMedal,
+  FaHome,
 } from 'react-icons/fa'
 
 export default function MobileSidebar({
@@ -49,6 +50,15 @@ export default function MobileSidebar({
         </div>
 
         <nav className="flex flex-col gap-3">
+
+          <NavLink
+            onClick={onClose}
+            className={navItem}
+            to="/"
+          >
+            <FaHome />
+            Dashboard
+          </NavLink>
 
           <NavLink
             onClick={onClose}
