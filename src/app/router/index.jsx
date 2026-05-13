@@ -9,6 +9,7 @@ import HTMLPage from '../../pages/HTML'
 import CSSPage from '../../pages/CSS'
 import ReactPage from '../../pages/React'
 import ProfilePage from '../../pages/Profile'
+import NotFoundPage from '../../pages/NotFound'
 
 export const router = createBrowserRouter([
   {
@@ -66,5 +67,9 @@ export const router = createBrowserRouter([
         <AchievementsPage />
       </MainLayout>
     ),
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   }
 ])
