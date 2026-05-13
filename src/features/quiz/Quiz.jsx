@@ -20,7 +20,7 @@ export default function Quiz({ questions }) {
         if (index === question.correct) {
             setIsCorrect(true)
             setScore((s) => s + 1)
-            addXP(question.xp)
+           addXP(question.xp, category)
         } else {
             setIsCorrect(false)
         }

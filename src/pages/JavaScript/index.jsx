@@ -1,9 +1,11 @@
 import Quiz from '../../features/quiz/Quiz'
 
 import { javascriptQuestions } from '../../shared/constants/javascriptQuestions'
+import PageWrapper from '../../shared/ui/PageWrapper'
 
 export default function JavaScriptPage() {
   return (
+    <PageWrapper>
     <div>
       <h1 className="text-5xl font-bold mb-3">
         JavaScript Challenges
@@ -13,7 +15,8 @@ export default function JavaScriptPage() {
         Test your JavaScript knowledge.
       </p>
 
-      <Quiz questions={javascriptQuestions} />
+      <Quiz questions={jsQuestions} category="javascript" />
     </div>
+    </PageWrapper>
   )
 }

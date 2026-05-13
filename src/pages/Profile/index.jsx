@@ -1,11 +1,13 @@
 import { FaUserAstronaut, FaCode, FaTrophy } from 'react-icons/fa'
 
 import { useUserStore } from '../../app/store/useUserStore'
+import PageWrapper from '../../shared/ui/PageWrapper'
 
 export default function ProfilePage() {
   const { xp, level } = useUserStore()
 
   return (
+    <PageWrapper>
     <div>
       <h1 className="text-5xl font-bold mb-10">
         Profile
@@ -51,5 +53,6 @@ export default function ProfilePage() {
 
       </div>
     </div>
+    </PageWrapper>
   )
 }

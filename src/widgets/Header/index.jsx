@@ -1,6 +1,8 @@
 import XPBar from '../XPBar'
+import { FaBars } from 'react-icons/fa'
+import HackerTerminal from '../../widgets/HackerTerminal'
 
-export default function Header() {
+export default function Header({ onMenuOpen }) {
   return (
     <header className="
       border-b
@@ -18,9 +20,19 @@ export default function Header() {
         md:justify-between
         gap-5
       ">
+        <button
+          onClick={onMenuOpen}
+          className="
+    md:hidden
+    text-2xl
+    text-cyan-400
+  "
+        >
+          <FaBars />
+        </button>
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">
-            Welcome Back 
+            Welcome Back
           </h2>
 
           <p className="text-gray-400 mt-1 text-sm md:text-base">
@@ -29,6 +41,13 @@ export default function Header() {
         </div>
 
         <XPBar />
+      </div>
+      <div className="mt-14">
+        <h2 className="text-3xl font-bold mb-6">
+          System Terminal
+        </h2>
+
+        <HackerTerminal />
       </div>
     </header>
   )

@@ -1,11 +1,13 @@
 import Quiz from '../../features/quiz/Quiz'
 
 import { htmlQuestions } from '../../shared/constants/htmlQuestions'
+import PageWrapper from '../../shared/ui/PageWrapper'
 
 export default function HTMLPage() {
   return (
-    <div>
-      <h1 className="text-5xl font-bold mb-3">
+    <PageWrapper>
+      <div>
+          <h1 className="text-5xl font-bold mb-3">
         HTML Challenges
       </h1>
 
@@ -13,7 +15,8 @@ export default function HTMLPage() {
         Improve your semantic HTML skills.
       </p>
 
-      <Quiz questions={htmlQuestions} />
+     <Quiz questions={htmlQuestions} category="html" />
     </div>
+    </PageWrapper>
   )
 }

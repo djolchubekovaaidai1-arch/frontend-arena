@@ -7,6 +7,7 @@ import {
     FaCss3Alt,
     FaMedal,
     FaReact,
+    FaHome,
     FaUser,
 } from 'react-icons/fa'
 
@@ -31,6 +32,11 @@ export default function Sidebar() {
             </h1>
 
             <nav className="flex flex-col gap-3">
+                <NavLink className={navItem} to="/">
+                    <FaHome />
+                    Dashboard
+                </NavLink>
+                
                 <NavLink className={navItem} to="/javascript">
                     <FaJs />
                     JavaScript
@@ -60,6 +66,7 @@ export default function Sidebar() {
                     <FaUser />
                     Profile
                 </NavLink>
+
             </nav>
         </aside>
     )
